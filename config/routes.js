@@ -1,10 +1,10 @@
 // config/routes.js
 
-module.exports = {
+module.exports = function(app) {
   // =====================================
   // Public pages
   // =====================================
-  app.get('/', isLoggedIn, function(req, res) {
+  app.get('/', function(req, res) {
     res.render('pages', {
       title: 'Home'
     });
