@@ -1,40 +1,18 @@
 include ../partials/header.pug
 body#home
   include ../partials/navbar.pug
-  div.parallax-container.overlay
-    div.section.no-pad-bot
-      div.container
-        h1.header.center.white-text Dead Presidents
-      div.row.center
-        h5.header.col.s12.light.white-text.
-          
-      div.row.center
-        div.input-field.col.s12
-          form(action='/query/user' method='post')
-            input(type='text' name='name')#autocomplete-input.autocomplete.special
-            label(for='autocomplete-input').special Search for somebody
+  div.parallax-container.overlay.row
+    div.section.no-pad-bot.valign-wrapper
+      div.input-field.col.s12.center
+        form(action='/query/user' method='post')
+          input(type='text' name='name')#autocomplete-input.autocomplete.special
+          label(for='autocomplete-input').special Search for somebody
 
     div.parallax
       img(src='/assets/images/static/papuh.png')
   div.section.white
     div.row.container
-      div.col.s12.m4
-        div.icon-block
-          h2.center
-        
-      div.col.s12.m4
-        div.icon-block
-          h2.center
-            
-          h5.center.
-            Watson's take on who our influencers really were.  
-          p.light.
-           
-      div.col.s12.m4
-        div.icon-block
-        
-  div.parallax-container.overlay
-    div.parallax
-      
-
+      div.icon-block
+        h5.center.light.
+          Watson's take on who our influencers really were.  
   script(src='/assets/js/scripts/init-parallax.js')
