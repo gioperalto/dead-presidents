@@ -11,9 +11,8 @@ body#home
       div.row.center
         div.input-field.col.s12
           form(action='/query/user' method='post')
-            i.material-icons.prefix find_replace
             input(type='text' name='name')#autocomplete-input.autocomplete.special
-            label(for='autocomplete-input') Search for somebody
+            label(for='autocomplete-input').special Search for somebody
 
     div.parallax
       img(src='/assets/images/static/mountain.jpg')

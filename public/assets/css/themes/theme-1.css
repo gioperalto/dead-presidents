@@ -16,3 +16,7 @@ h1.header {
 input.special {
   color: #fff;
 }
+
+label.special {
+  position: relative;
+}
