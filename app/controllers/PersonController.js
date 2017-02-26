@@ -32,11 +32,25 @@ module.exports = {
     });
 
     personality_insights.profile(params, function(error, response) {
-      if (error)
+      if (error) {
         console.log('Error:', error);
-      else
+      } else {
+        var person = new Person({
+          name: name
+        });
+        async.each(response.personality, function(personality, function() {
+          var p = {
+            name: personality.name,
+            percentile: personality.percentile,
+            children: []
+          };
+          async.each(personality.children, function(child, function() {
+
+            });
+          });
+        });
         callback(response);
       }
-    );
+    });
   }
 };

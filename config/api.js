@@ -4,8 +4,9 @@
 var PersonController = require('../app/controllers/PersonController');
 
 module.exports = function(app) {
-  app.get('/api/ibm', function(req, res) {
-    PersonController.getPersonalityInsightsFromWatson(function(response) {
+  app.get('/api/watson/:name', function(req, res) {
+    var name = req.params.name;
+    PersonController.getPersonalityInsightsFromWatson(name, function(response) {
       res.json(response);
     });
   });
