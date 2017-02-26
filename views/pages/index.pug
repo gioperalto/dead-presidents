@@ -1,0 +1,45 @@
+include ../partials/header.pug
+body#home
+  include ../partials/navbar.pug
+  div.parallax-container.overlay
+    div.section.no-pad-bot
+      div.container
+        h1.header.center.white-text Overnight Success
+      div.row.center
+        h5.header.col.s12.light.white-text.
+          Master any skill.
+      div.row.center
+        a(href='/signup').btn-large.deep-orange Create an account
+    div.parallax
+      img(src='/assets/images/static/mountain.jpg')
+  div.section.white
+    div.row.container
+      div.col.s12.m4
+        div.icon-block
+          h2.center
+            i.material-icons vpn_key
+          h5.center.
+            Quantify your progress.
+          p.light.center.
+            Manage various skill sets and see yourself progressing daily!
+      div.col.s12.m4
+        div.icon-block
+          h2.center
+            i.material-icons trending_up
+          h5.center.
+            Achieve Mastery.
+          p.light.center.
+            Work steadily towards the goal of 10,000 hours. Easier said than done!
+      div.col.s12.m4
+        div.icon-block
+          h2.center
+            i.material-icons line_style
+          h5.center.
+            Challenge your peers.
+          p.light.center.
+            Get motivated by competing with your friends. You snooze, you lose!
+  div.parallax-container.overlay
+    div.parallax
+      img(src='/assets/images/static/1.png')
+
+  script(src='/assets/js/scripts/init-parallax.js')
