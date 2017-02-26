@@ -12,3 +12,7 @@ h1.header {
 .overlay {
   background-color: rgba(0,0,0,0.6);
 }
+
+input.special {
+  color: #fff;
+}
