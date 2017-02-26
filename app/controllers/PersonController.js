@@ -38,16 +38,20 @@ module.exports = {
         var person = new Person({
           name: name
         });
-        async.each(response.personality, function(personality, function() {
-          var p = {
-            name: personality.name,
-            percentile: personality.percentile,
-            children: []
-          };
-          async.each(personality.children, function(child, function() {
-
+        async.each(response.personality, function(personality, callback) {
+            var p = {
+              name: personality.name,
+              percentile: personality.percentile,
+              children: []
+            };
+            async.each(personality.children, function(child, cb) {
+              p.children.push({
+                name: child.name,
+                percentile: child.percentile
+              });
+              cb(null);
             });
-          });
+            callback(null);
         });
         callback(response);
       }
