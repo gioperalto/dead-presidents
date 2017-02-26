@@ -11,15 +11,23 @@ var mongoose     = require('mongoose');
 var configDB     = require('./config/database');
 var port         = process.env.PORT || 1337;
 
+// Allow Express to serve static files in "public" directory
+app.use(express.static('public'));
+
+// Views + Templating
+app.set('views', './views');
+app.set('view engine', 'pug');
+
 // ---------------------------------------------------------
 // Database configurations
 // ---------------------------------------------------------
 mongoose.connect(configDB.url);
 
 // ---------------------------------------------------------
-// API Endpoints
+// Routes
 // ---------------------------------------------------------
 require('./config/api')(app);
+require('./config/routes')(app);
 
 // ---------------------------------------------------------
 // Launch
