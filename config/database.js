@@ -1,5 +1,6 @@
 // config/database.js
+let creds = require('token.js');
 
 module.exports = {
-  url: 'mongodb://localhost:27017/dead-presidents'
+  url: 'mongodb://' + creds.mongo.host + ':' + creds.mongo.port + '/' + creds.mongo.db'
 };
