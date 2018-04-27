@@ -5,15 +5,15 @@ In order to access MongoDB and IBM Watson you will need to configure the config/
 
 `{                                `  
 `  creds: {                       `  
-`    mongodb: {                   `  
-`      host: 'localhost',         `  
-`      port: '27017',             `  
-`      db: 'dead-presidents'      `  
-`    },                           `  
-`    ibm: {                       `  
-`      username: 'your_username', `  
-`      password: 'your_password'  `  
-`    }                            `  
+`    mongodb: {  
+      host: 'localhost',
+      port: '27017',
+      db: 'dead-presidents'
+    },                           `  
+`    ibm: {
+      username: 'your_username',
+      password: 'your_password'
+    }                            `  
 `  }                              `  
 `}                                `  
 
